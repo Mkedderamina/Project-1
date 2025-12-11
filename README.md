@@ -19,19 +19,19 @@ data = {
 df = pd.DataFrame(data)
 print("*********Création et affichage *********")
 
-# 1) Affichage 
+# Affichage 
 print("Tableau des séquences ADN :")
 print(df, "\n\n") 
 
-# 2) Sélectionné la colonne "Longueur"
-print("********* Opération *********")
-Longueur = df ["Longueur"]
-print(Longueur ,"\n\n")
+# 1) Sélectionner la colonne "Longueur"
+Longueur = df["Longueur"]
+print(longueur,"\n\n")
 
-# 3) Filtrer les séquences de longueur > 10
-print("********* Filtrage supérieur à 10 *********")
-Filtered_df = df[df["Longueur"] >à 10] 
-print(Filtered_df, "\n\n")
+# 2) Filtrer les séquences dont la longueur supérieure à 10
+print("**************** Filtrage dont la longueur ****************")
+# Filtrer les séquences dont la longueur supérieure à 10
+filtred_df = df[df["Longueur"] > 10]
+print(filtered_df,"\n\n")
 
 # 3) calculer la moyenne du pourcentage de GC
 print("**************** Calcul de la moyenne ****************")
