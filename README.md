@@ -1,4 +1,4 @@
-#Pandas with Mkedder Amina 
+حيث#Pandas with Mkedder Amina 
 #For Biochimie Master 1 Tlemcen ...09/12/2025
 #The project members : 
 #Mdjahed Anfel
@@ -32,3 +32,15 @@ print(Longueur ,"\n\n")
 print("********* Filtrage supérieur à 10 *********")
 Filtered_df = df[df["Longueur"] >à 10] 
 print(Filtered_df, "\n\n")
+
+# 3) calculer la moyenne du pourcentage de GC
+print("**************** Calcul de la moyenne ****************")
+# Calculer la moyenne du pourcentage de GC
+average_gc = df["Pourcentage GC"].mean()
+print(f"Pourcentage moyen de GC : {average_gc:.3f}%","\n\n")
+
+# 4) Ajouter une nouvelle colonne avec des calculs 
+print("****************Ajoute d'une nouvelle colonne****************")
+# Ajouter une nouvelle collone "Catégorie GC"
+df["Catégorie GC"] = df["Pourcentage GC"].apply(lambda x: "Riche" if x > 55 else "Moyen" if 45 < x <55 else  "Faible")
+
