@@ -44,3 +44,15 @@ print("**************** Ajoute d'une nouvelle colonne ****************")
 # Ajouter une nouvelle collone "Catégorie GC"
 df["Catégorie_GC"] = df["Pourcentage_GC"].apply(lambda x: "Riche" if x > 55 else "Moyen" if 45 < x <55 else  "Faible")
 
+# 5) Ajouter une colonne comptant les 'G'
+df["Nombre de G"] = df["Séquence"].str.count("G")
+print("===== Nombre de G ajoutés =====")
+print(df,"\n\n")
+
+#6) Calculer l'écart type de pourcentage GC et de longueur
+écarttype_gc = df["Pourcentage GC"].std()
+écarttype_long = df["longueur"].std()
+print("===== Écart type =====")
+print("Écart type de pourcentage GC:", écarttype_gc)
+print("Écart type de longueur:", écarttype_long)
+print(df,"\n\n")
